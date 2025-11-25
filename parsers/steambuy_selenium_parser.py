@@ -10,7 +10,7 @@ import time
 from parsers.abstract_selenium_parser import AbstractSeleniumParser
 
 class SteambuySeleniumParser(AbstractSeleniumParser):
-    def parse_search_results(self, query):
+    def search_games(self, query: str) -> List[Game]:
         url = f"https://steambuy.com/catalog/?q={query}"
         
         try:

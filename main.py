@@ -22,7 +22,7 @@ if __name__ == "__main__":
         query = input("Игра: ")
         if query == "":
             break
-        steambuy_games = steambuy_parser.parse_search_results(query)
+        steambuy_games = steambuy_parser.search_games(query)
         print("____ Steambuy ____")
         for game in sorted(steambuy_games, key=lambda i: i.price):
             print(f"{game.title}: {game.price} ₽ [{game.discount}% скидка]")
