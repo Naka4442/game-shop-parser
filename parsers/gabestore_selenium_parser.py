@@ -2,7 +2,8 @@ import time
 from typing import List
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
-from models.game import Game
+
+from models import Game
 from parsers.abstract_selenium_parser import AbstractSeleniumParser
 
 

@@ -39,9 +39,4 @@ class SteampayParser:
                 # print(f"Ошибка парсинга: {item}: {e}")
                 continue
         return games
-
-if __name__ == "__main__":
-    parser = SteampayParser()
-    games = parser.search_games(input("Игра: "))
-    for game in sorted(games, key=lambda i: i.price):
-        print(f"{game.title}: {game.price} ₽ [{game.discount}% скидка]")
+    

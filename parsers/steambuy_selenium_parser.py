@@ -1,12 +1,9 @@
-from typing import List
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.chrome.options import Options
-from models import Game
 import time
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from typing import List
 
+from models import Game
 from parsers.abstract_selenium_parser import AbstractSeleniumParser
 
 class SteambuySeleniumParser(AbstractSeleniumParser):

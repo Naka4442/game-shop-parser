@@ -1,7 +1,10 @@
-from abc import ABC
+from abc import ABC, abstractmethod
+from typing import List
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver import Chrome
+
+from models.game import Game
 
 
 class AbstractSeleniumParser(ABC):
@@ -23,3 +26,8 @@ class AbstractSeleniumParser(ABC):
     
     def close(self):
         self.driver.quit()
+
+    @abstractmethod
+    def search_games(self, query: str) -> List[Game]:
+        pass
+    
